@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<html>
+<head>
+    <title>TÍNH TIỀN</title>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+    <script language="Javascript">
+        function CalculateTotal() {
+            var dg = parseFloat(document.getElementById("iPrice").value);
+            var sl = parseFloat(document.getElementById("iQuantity").value);
+
+            window.document.getElementById("IbTotal").value = dg * sl;
+        }
+
+    </script>
+    <script src="~/Scripts/userJS.js"></script>
+</head>
+<body>
+    NhẬP SỐ LƯỢNG VÀ ĐƠN GIÁ
+    <form name="shoppingcart" method="get">
+        Đơn giá: <input type="number" id="iPrice" name="Price" /><br />
+        Số lượng: <input type="number" id="iQuantity"
+                         name="Quantity" min="1"
+                         onchange="CalculateTotal();"/><br />
+        Thành tiền:<input type="text" id="IbTotal" name="Total" /><br />
+    </form>
+</body>
+</html>
+
+

@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <title>Welcome page:su dung form de cho phep nhap du lieu va dung hop thoai Alert de hien thi du lieu </title>
+    <script language=" Javascript">
+        function HienThi(name)
+        {
+            HienThi(msg.value);
+            alert(name);
+        }
+
+    </script>
+</head>
+<body>
+    <form name="welcome">
+        <input type="text" name="txtName" value="Toi den tu Viet Nam"
+               maxlength="30"/>
+        <input type="button" name="btnWelcome" value="Welcome"
+               onclick=" DisplayMsg(txtName.value); " />
+    </form>
+</body>
+</html>
+
+
